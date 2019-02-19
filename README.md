@@ -1,4 +1,5 @@
 # POO2
+
 Segunda batería de ejercicios de programación orientados a objetos.
 
 EJercicio 2:
