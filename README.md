@@ -71,6 +71,7 @@ cuando un móvil llama a otro, se le cobra al que llama, no al que recibe la
 llamada. A continuación se proporciona el contenido del main y el resultado
 que debe aparecer por pantalla. Para que el total tarificado aparezca con dos
 decimales, puedes utilizar DecimalFormat.
+
 Contenido del main
 Movil m1 = new Movil("678 11 22 33", "rata");
 Movil m2 = new Movil("644 74 44 69", "mono");
