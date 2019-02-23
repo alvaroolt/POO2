@@ -20,7 +20,7 @@ public class Tiempo {
 	private int horas;
 	private int minutos;
 	private int segundos;
-	
+
 	// constructor
 	public Tiempo(int horas, int minutos, int segundos) {
 		setHoras(horas);
@@ -88,6 +88,8 @@ public class Tiempo {
 		ordenaTiempo(resultadoEnSegundos);
 	}
 
+	// método que recoge las horas, minutos y segundos a restar al tiempo
+	// establecido en nuestra instancia de tiempo.
 	public void resta() {
 		Scanner sc = new Scanner(System.in);
 
