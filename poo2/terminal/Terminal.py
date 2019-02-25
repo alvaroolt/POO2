@@ -11,6 +11,7 @@ class Terminal:
     # constructor
     def __init__(self, id):
         self.id = id
+        self.tiempoConversacion = 0
         
     # setter número de terminal
     def setId(self, id):
@@ -18,7 +19,7 @@ class Terminal:
         
     # getter identificador
     def getId(self):
-        return self.identificador
+        return self.id
     
     # setter de tiempo transcurrido en llamada
     def setTiempo(self, t):
@@ -34,7 +35,7 @@ class Terminal:
     '''
     def llama(self, Terminal, segundos):
         self.tiempoConversacion += segundos;
-        Terminal.setTiempo(Terminal.getTiempo(self) += segundos)
+        Terminal.setTiempo(Terminal.getTiempo() + segundos)
         
     def __str__(self):
-        return ("Nº " + self.getId() + " - " + self.getTiempo() + "s de conversación")
+        return ("Nº " + str(self.getId()) + " - " + str(self.getTiempo()) + "s de conversación")
