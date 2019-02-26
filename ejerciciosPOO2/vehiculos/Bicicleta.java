@@ -2,8 +2,11 @@ package ejerciciosPOO2.vehiculos;
 
 public class Bicicleta extends Vehiculo {
 
-	public Bicicleta() {
+	private String tipoFrenos;
+	
+	public Bicicleta(String frenos) {
 		super();
+		this.tipoFrenos = frenos;
 	}
 	
 	public void hacerCaballito() {

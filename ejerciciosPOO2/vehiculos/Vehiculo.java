@@ -1,4 +1,5 @@
 package ejerciciosPOO2.vehiculos;
+
 import java.util.Scanner;
 
 /**
@@ -19,21 +20,17 @@ import java.util.Scanner;
  */
 public class Vehiculo {// EJercicio 2
 
-	/*
-	 * Características de la clase Vehiculo
-	 */
+	// Características de la clase Vehiculo
 	private static int contadorVehiculos;
-
 	private static int kmTotales;
-
 	private int km;
 
 	public Vehiculo() {
-		Vehiculo.contadorVehiculos++;
-		km = 0;
+		//Vehiculo.contadorVehiculos++;
+		this.km = 0;
 	}
-	
-	public int getKmTotales() {
+
+	public static int getKmTotales() {
 		return kmTotales;
 	}
 
@@ -49,8 +46,9 @@ public class Vehiculo {// EJercicio 2
 		if (kilometros < 0) {
 			kilometros = kilometros * -1;
 		}
-		kmTotales += kilometros;
 		this.km += kilometros;
+		kmTotales += kilometros;
+		
 
 		System.out.println("Kilometros introducidos correctamente.");
 	}
@@ -59,7 +57,7 @@ public class Vehiculo {// EJercicio 2
 		System.out.println("El vehículo ha recorrido un total de " + getKM() + "km.");
 	}
 
-	public void verKilometrajeTotal() {
+	public static void verKilometrajeTotal() {
 		System.out.println(
 				"La cantidad de kilometros totales recorridos por todos los vehiculos es de " + getKmTotales() + "km.");
 	}

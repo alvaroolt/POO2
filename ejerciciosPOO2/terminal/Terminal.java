@@ -45,6 +45,7 @@ public class Terminal {
 		return this.tiempoConversacion;
 	}
 	
+	// getter
 	public int getSegundosCoste() {
 		return this.segundosCoste;
 	}

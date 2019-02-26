@@ -33,10 +33,12 @@ public class Movil extends Terminal {
 		}
 	}
 
+	// getter
 	private String getTarifa() {
 		return this.tarifa;
 	}
 
+	// comprueba si la tarifa introducida es válida
 	private boolean compruebaTarifa() {
 		if ((getTarifa() != "rata") && (getTarifa() != "mono") && (getTarifa() != "bisonte")) {
 			return false;
@@ -45,13 +47,13 @@ public class Movil extends Terminal {
 		}
 	}
 
+	// getter que obtiene el coste de la tarifa
 	String getCoste() {
 		DecimalFormat formato = new DecimalFormat("###.##");
 		// He de aclarar que 0.001, 0.002 y 0.005 son los precios de las tarifas
 		// (pero en segundos, no minutos)
 		if (this.tarifa == "rata") {
 			return formato.format(0.001 * this.getSegundosCoste()) + "€";
-
 		} else if (this.tarifa == "mono") {
 			return formato.format(0.002 * this.getSegundosCoste()) + "€";
 		} else if (this.tarifa == "bisonte") {
