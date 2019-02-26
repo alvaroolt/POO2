@@ -5,6 +5,7 @@ Implementa la clase Terminal. Un terminal tiene asociado un número. Los
 terminales se pueden llamar unos a otros y el tiempo de conversación corre
 para ambos.
 @author: Álvaro Leiva Toledano
+@version: 1.0
 '''
 
 t1 = Terminal("678 11 22 33")
