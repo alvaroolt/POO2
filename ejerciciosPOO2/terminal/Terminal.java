@@ -15,6 +15,10 @@ public class Terminal {
 	private String identificador;
 	private int tiempoConversacion; // en segundos
 
+	// variable que cuenta los segundos en los que llama el terminal (es decir, los
+	// segundos en los que paga una tarifa
+	private int segundosCoste = 0;
+
 	// constructor
 	public Terminal(String id) {
 		setId(id);
@@ -40,11 +44,16 @@ public class Terminal {
 	public int getTiempo() {
 		return this.tiempoConversacion;
 	}
+	
+	public int getSegundosCoste() {
+		return this.segundosCoste;
+	}
 
 	// método que establece una llamada entre dos instancias de Terminal y les añade
 	// segundos de conversación
 	public void llama(Terminal terminal, int segundos) {
 		this.tiempoConversacion += segundos;
+		segundosCoste += segundos;
 		terminal.setTiempo(terminal.tiempoConversacion += segundos);
 	}
 

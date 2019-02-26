@@ -1,5 +1,6 @@
 package ejerciciosPOO2.movil;
 
+import java.text.DecimalFormat;
 import ejerciciosPOO2.terminal.Terminal;
 
 /**
@@ -13,7 +14,7 @@ import ejerciciosPOO2.terminal.Terminal;
  * aparezca con dos decimales, puedes utilizar DecimalFormat
  * 
  * @author Álvaro Leiva Toledano
- * @version
+ * @version 1.0
  */
 
 public class Movil extends Terminal {
@@ -42,6 +43,28 @@ public class Movil extends Terminal {
 		} else {
 			return true;
 		}
+	}
+
+	String getCoste() {
+		DecimalFormat formato = new DecimalFormat("###.##");
+		// He de aclarar que 0.001, 0.002 y 0.005 son los precios de las tarifas
+		// (pero en segundos, no minutos)
+		if (this.tarifa == "rata") {
+			return formato.format(0.001 * this.getSegundosCoste()) + "€";
+
+		} else if (this.tarifa == "mono") {
+			return formato.format(0.002 * this.getSegundosCoste()) + "€";
+		} else if (this.tarifa == "bisonte") {
+			return formato.format(0.005 * this.getSegundosCoste()) + "€";
+		} else {
+		}
+		return "Hubo algún error.";
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + " - tarificados " + this.getCoste();
+
 	}
 
 }
